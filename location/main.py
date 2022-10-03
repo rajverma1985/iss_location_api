@@ -15,4 +15,3 @@ day_dict = {
 day_info = requests.get("https://api.sunrise-sunset.org/json", params=day_dict)
 sunrise = day_info.json()['results']['sunrise']
 sunset = day_info.json()['results']['sunset']
-print(sunrise, sunset)
