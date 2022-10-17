@@ -12,6 +12,6 @@ def send_email():
         connection.ehlo()
         connection.login(user=os.getenv('user'), password=os.getenv('password'))
         connection.sendmail(
-            from_addr=os.getenv('my_email'),
-            to_addrs=os.getenv('my_email'),
+            from_addr=os.environ['my_email'],
+            to_addrs=os.environ['my_email'],
             msg="Subject: ISS location Info\n\n Looks Up ☝️🛰the ISS is there in the sky!  Yahoo!")
