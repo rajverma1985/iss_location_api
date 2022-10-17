@@ -14,4 +14,4 @@ def send_email():
         connection.sendmail(
             from_addr=os.environ['my_email'],
             to_addrs=os.environ['my_email'],
-            msg="Subject: ISS location Info\n\n Looks Up ☝️🛰the ISS is there in the sky!  Yahoo!")
+            msg="Subject: ISS location Info\n\n Look Up ☝️🛰the ISS is there in the sky!  Yahoo!")

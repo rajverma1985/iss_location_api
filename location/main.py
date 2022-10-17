@@ -28,6 +28,7 @@ def is_night():
     sunset = int(day_info.json()['results']['sunset'].split('T')[1].split(':')[0])
     if datetime.now().hour >= sunset or datetime.now().hour < sunrise:
         return True
+    return False
 
 
 # check if iss is at your location post sunset and before sunrise
@@ -35,4 +36,3 @@ while True:
     time.sleep(20)
     if iss_is_visible() and is_night():
         send_email()
-
